@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cài Đặt Môi Trường Phát Triển Java</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        article {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        .video-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .comment-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #ddd;
+        }
+
+        /* Thêm các media query để làm responsive */
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            article {
+                margin: 15px;
+                padding: 15px;
+            }
+
+            .video-container {
+                margin: 15px 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            /* Đảm bảo video có thể bao phủ toàn bộ chiều rộng của container */
+            .video-container iframe {
+                width: 450px;
+                height: 255px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1.3em;
+            }
+
+            p {
+                font-size: 0.9em;
+            }
+
+            article {
+                margin: 10px;
+                padding: 10px;
+            }
+
+            .video-container {
+                margin: 10px 0;
+            }
+
+            .comment-section {
+                margin-top: 20px;
+                padding-top: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .video-container iframe {
+                width: 300px;
+                height: 170px;
+            }
+
+            h1 {
+                font-size: 1.3em;
+            }
+
+            h2 {
+                font-size: 1.1em;
+            }
+
+            p {
+                font-size: 0.85em;
+            }
+
+            article {
+                margin: 5px;
+                padding: 10px;
+            }
+
+            .video-container {
+                margin: 10px 0;
+            }
+
+            .comment-section {
+                margin-top: 15px;
+                padding-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Cài Đặt Môi Trường Phát Triển Java</h1>
+    </header>
+
+    <article>
+        <h1>Cài Đặt Môi Trường Phát Triển Java</h1>
+        <p>Để bắt đầu lập trình Java, bạn cần cài đặt môi trường phát triển Java (JDK) và một IDE (Integrated
+            Development Environment) để viết và chạy mã nguồn Java của mình. Trong bài viết này, chúng ta sẽ hướng dẫn
+            bạn từng bước để cài đặt môi trường phát triển Java trên hệ điều hành Windows và macOS.</p>
+
+        <h2>1. Cài Đặt Java Development Kit (JDK)</h2>
+        <p>JDK là bộ công cụ phát triển phần mềm của Oracle, bao gồm Java Runtime Environment (JRE) và các công cụ biên
+            dịch cần thiết để phát triển ứng dụng Java.</p>
+
+        <h3>Trên Windows</h3>
+        <p>Để cài đặt JDK trên Windows, làm theo các bước sau:</p>
+        <ul>
+            <li>Truy cập trang web chính thức của Oracle: <a
+                    href="https://www.oracle.com/java/technologies/javase-jdk11-downloads.html" target="_blank">Java
+                    Downloads</a></li>
+            <li>Tải về phiên bản JDK phù hợp với hệ điều hành của bạn (Windows).</li>
+            <li>Chạy file cài đặt và làm theo hướng dẫn trên màn hình.</li>
+            <li>Thêm đường dẫn JDK vào biến môi trường (Environment Variables) để có thể sử dụng dòng lệnh từ bất kỳ thư
+                mục nào.</li>
+        </ul>
+
+        <h3>Trên macOS</h3>
+        <p>Trên macOS, bạn có thể sử dụng Homebrew để cài đặt JDK:</p>
+        <ul>
+            <li>Mở Terminal và chạy lệnh sau để cài đặt Homebrew nếu bạn chưa có:
+                <code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code>
+            </li>
+            <li>Cài đặt JDK với lệnh: <code>brew install openjdk@11</code></li>
+            <li>Thêm đường dẫn JDK vào biến môi trường bằng cách thêm dòng sau vào file <code>.bash_profile</code> hoặc
+                <code>.zshrc</code>:
+                <code>export PATH="/usr/local/opt/openjdk@11/bin:$PATH"</code>
+            </li>
+        </ul>
+
+        <h2>2. Cài Đặt IDE (Môi Trường Phát Triển Tích Hợp)</h2>
+        <p>IDE là phần mềm giúp bạn viết mã, biên dịch và chạy chương trình Java dễ dàng hơn. Một số IDE phổ biến để lập
+            trình Java là:</p>
+        <ul>
+            <li><strong>IntelliJ IDEA:</strong> Một IDE mạnh mẽ với tính năng tự động hoàn thành mã và các công cụ phát
+                triển Java cao cấp. Bạn có thể tải về tại <a href="https://www.jetbrains.com/idea/"
+                    target="_blank">JetBrains</a>.</li>
+            <li><strong>NetBeans:</strong> Một IDE mã nguồn mở được phát triển bởi Oracle. Tải về tại <a
+                    href="https://netbeans.apache.org/" target="_blank">Apache NetBeans</a>.</li>
+            <li><strong>Eclipse:</strong> Một IDE phổ biến khác cho Java, có nhiều plugin hỗ trợ phát triển ứng dụng
+                Java. Tải về tại <a href="https://www.eclipse.org/" target="_blank">Eclipse</a>.</li>
+        </ul>
+
+        <h2>3. Kiểm Tra Cài Đặt</h2>
+        <p>Sau khi cài đặt JDK và IDE, bạn có thể kiểm tra bằng cách viết một chương trình đơn giản. Dưới đây là mã ví
+            dụ "Hello World" trong Java:</p>
+        <pre><code>
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+        </code></pre>
+
+        <p>Chạy chương trình trong IDE và nếu mọi thứ hoạt động bình thường, bạn sẽ thấy "Hello, World!" in ra trên màn
+            hình.</p>
+
+        <div class="video-container">
+            <h2>Video Minh Họa: Cài Đặt Môi Trường Phát Triển Java</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/N34d1S63myI?si=pta50kKvva-oo1uP"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
+        <h2>Kết luận</h2>
+        <p>Việc cài đặt môi trường phát triển Java là bước đầu tiên và quan trọng để bắt đầu lập trình Java. Sau khi
+            hoàn tất cài đặt, bạn đã sẵn sàng để bắt đầu viết mã và phát triển các ứng dụng Java của riêng mình. Nếu bạn
+            gặp bất kỳ khó khăn nào trong quá trình cài đặt, đừng ngần ngại để lại câu hỏi dưới phần bình luận.</p>
+
+        <div class="comment-section">
+            <h2>Bình luận</h2>
+            <p>[Phần bình luận để người đọc chia sẻ ý kiến và thảo luận thêm về bài viết.]</p>
+        </div>
+    </article>
+
+</body>
+
+</html>

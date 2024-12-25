@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cấu Trúc Điều Khiển trong Java</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        article {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        .video-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .comment-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #ddd;
+        }
+
+        /* Thêm các media query để làm responsive */
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            article {
+                margin: 15px;
+                padding: 15px;
+            }
+
+            .video-container {
+                margin: 15px 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            /* Đảm bảo video có thể bao phủ toàn bộ chiều rộng của container */
+            .video-container iframe {
+                width: 450px;
+                height: 255px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1.3em;
+            }
+
+            p {
+                font-size: 0.9em;
+            }
+
+            article {
+                margin: 10px;
+                padding: 10px;
+            }
+
+            .video-container {
+                margin: 10px 0;
+            }
+
+            .comment-section {
+                margin-top: 20px;
+                padding-top: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .video-container iframe {
+                width: 300px;
+                height: 170px;
+            }
+
+            h1 {
+                font-size: 1.3em;
+            }
+
+            h2 {
+                font-size: 1.1em;
+            }
+
+            p {
+                font-size: 0.85em;
+            }
+
+            article {
+                margin: 5px;
+                padding: 10px;
+            }
+
+            .video-container {
+                margin: 10px 0;
+            }
+
+            .comment-section {
+                margin-top: 15px;
+                padding-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Cấu Trúc Điều Khiển trong Java</h1>
+    </header>
+
+    <article>
+        <h1>Cấu Trúc Điều Khiển trong Java</h1>
+        <p>Cấu trúc điều khiển trong Java giúp điều khiển luồng thực thi của chương trình. Các cấu trúc này bao gồm các
+            câu lệnh điều kiện, vòng lặp, và câu lệnh nhảy. Cấu trúc điều khiển cho phép chương trình đưa ra quyết định,
+            lặp lại hành động hoặc thoát khỏi một phần mã trong quá trình thực thi.</p>
+
+        <h2>1. Câu lệnh Điều kiện (if, else, else if)</h2>
+        <p>Câu lệnh điều kiện được sử dụng để kiểm tra một điều kiện và thực hiện hành động tương ứng. Trong Java, cấu
+            trúc điều kiện bao gồm <code>if</code>, <code>else if</code>, và <code>else</code>.</p>
+
+        <ul>
+            <li><strong>Câu lệnh if:</strong> Kiểm tra một điều kiện và thực thi mã nếu điều kiện đúng.</li>
+            <pre><code>if (condition) {
+    // Code to be executed if condition is true
+}</code></pre>
+
+            <li><strong>Câu lệnh else:</strong> Thực thi mã nếu điều kiện trong <code>if</code> không đúng.</li>
+            <pre><code>if (condition) {
+    // Code to be executed if condition is true
+} else {
+    // Code to be executed if condition is false
+}</code></pre>
+
+            <li><strong>Câu lệnh else if:</strong> Kiểm tra một điều kiện bổ sung khi điều kiện trong <code>if</code>
+                không đúng.</li>
+            <pre><code>if (condition1) {
+    // Code if condition1 is true
+} else if (condition2) {
+    // Code if condition2 is true
+} else {
+    // Code if neither condition1 nor condition2 is true
+}</code></pre>
+        </ul>
+
+        <h2>2. Vòng Lặp (for, while, do-while)</h2>
+        <p>Vòng lặp trong Java cho phép bạn thực thi một khối mã nhiều lần. Java hỗ trợ ba loại vòng lặp cơ bản:</p>
+
+        <ul>
+            <li><strong>Vòng lặp for:</strong> Được sử dụng khi số lần lặp là xác định trước.</li>
+            <pre><code>for (initialization; condition; update) {
+    // Code to be executed
+}</code></pre>
+
+            <li><strong>Vòng lặp while:</strong> Được sử dụng khi điều kiện lặp được kiểm tra trước mỗi lần lặp.</li>
+            <pre><code>while (condition) {
+    // Code to be executed
+}</code></pre>
+
+            <li><strong>Vòng lặp do-while:</strong> Được sử dụng khi cần đảm bảo ít nhất một lần lặp, vì điều kiện được
+                kiểm tra sau mỗi lần lặp.</li>
+            <pre><code>do {
+    // Code to be executed
+} while (condition);</code></pre>
+        </ul>
+
+        <h2>3. Câu Lệnh Nhảy (break, continue)</h2>
+        <p>Câu lệnh nhảy giúp bạn thoát khỏi một vòng lặp hoặc bỏ qua một vòng lặp hiện tại và tiếp tục với vòng lặp
+            tiếp theo.</p>
+
+        <ul>
+            <li><strong>Câu lệnh break:</strong> Thoát khỏi vòng lặp hoặc câu lệnh switch.</li>
+            <pre><code>for (int i = 0; i < 10; i++) {
+    if (i == 5) {
+        break; // Exit the loop when i is 5
+    }
+    System.out.println(i);
+}</code></pre>
+
+            <li><strong>Câu lệnh continue:</strong> Bỏ qua phần còn lại của vòng lặp và tiếp tục với lần lặp tiếp theo.
+            </li>
+            <pre><code>for (int i = 0; i < 10; i++) {
+    if (i == 5) {
+        continue; // Skip the rest of the loop when i is 5
+    }
+    System.out.println(i);
+}</code></pre>
+        </ul>
+
+        <h2>4. Ví Dụ về Cấu Trúc Điều Khiển</h2>
+        <p>Dưới đây là một ví dụ đơn giản sử dụng các cấu trúc điều khiển trong Java:</p>
+        <pre><code>
+public class ControlStructures {
+    public static void main(String[] args) {
+        int number = 10;
+
+        // Câu lệnh if-else
+        if (number % 2 == 0) {
+            System.out.println(number + " là số chẵn.");
+        } else {
+            System.out.println(number + " là số lẻ.");
+        }
+
+        // Vòng lặp for
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Số hiện tại: " + i);
+        }
+
+        // Câu lệnh break trong vòng lặp
+        for (int i = 0; i < 10; i++) {
+            if (i == 5) {
+                break; // Thoát vòng lặp khi i = 5
+            }
+            System.out.println("Số hiện tại: " + i);
+        }
+    }
+}
+        </code></pre>
+
+        <h2>5. Kết luận</h2>
+        <p>Cấu trúc điều khiển trong Java là công cụ mạnh mẽ giúp kiểm soát luồng thực thi của chương trình. Việc hiểu
+            và sử dụng thành thạo các cấu trúc điều khiển sẽ giúp bạn phát triển các chương trình Java linh hoạt và hiệu
+            quả hơn. Hãy thực hành để nắm vững các khái niệm này!</p>
+
+        <div class="comment-section">
+            <h2>Bình luận</h2>
+            <p>[Phần bình luận để người đọc chia sẻ ý kiến và thảo luận thêm về bài viết.]</p>
+        </div>
+    </article>
+
+</body>
+
+</html>

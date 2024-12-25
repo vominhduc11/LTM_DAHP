@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Các Cấu Trúc Điều Khiển trong JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        article {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        .video-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .comment-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #ddd;
+        }
+
+        /* Thêm các media query để làm responsive */
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            article {
+                margin: 15px;
+                padding: 15px;
+            }
+
+            .video-container {
+                margin: 15px 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            /* Đảm bảo video có thể bao phủ toàn bộ chiều rộng của container */
+            .video-container iframe {
+                width: 450px;
+                height: 255px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1.3em;
+            }
+
+            p {
+                font-size: 0.9em;
+            }
+
+            article {
+                margin: 10px;
+                padding: 10px;
+            }
+
+            .video-container {
+                margin: 10px 0;
+            }
+
+            .comment-section {
+                margin-top: 20px;
+                padding-top: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .video-container iframe {
+                width: 300px;
+                height: 170px;
+            }
+
+            h1 {
+                font-size: 1.3em;
+            }
+
+            h2 {
+                font-size: 1.1em;
+            }
+
+            p {
+                font-size: 0.85em;
+            }
+
+            article {
+                margin: 5px;
+                padding: 10px;
+            }
+
+            .video-container {
+                margin: 10px 0;
+            }
+
+            .comment-section {
+                margin-top: 15px;
+                padding-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Các Cấu Trúc Điều Khiển trong JavaScript</h1>
+    </header>
+
+    <article>
+        <h1>Các Cấu Trúc Điều Khiển trong JavaScript</h1>
+        <p>Cấu trúc điều khiển trong JavaScript giúp bạn kiểm soát dòng chảy của chương trình, cho phép thực hiện các
+            hành động tùy thuộc vào các điều kiện khác nhau hoặc lặp lại một hành động nhiều lần.</p>
+
+        <h2>1. Câu Lệnh Điều Kiện</h2>
+        <p>Câu lệnh điều kiện cho phép thực thi một khối mã tùy thuộc vào điều kiện nhất định.</p>
+
+        <h3>if</h3>
+        <p>Câu lệnh <code>if</code> là cơ bản nhất để kiểm tra điều kiện:</p>
+        <pre><code>
+if (condition) {
+    // Thực thi mã khi điều kiện đúng
+}
+        </code></pre>
+
+        <h3>if...else</h3>
+        <p>Câu lệnh <code>if...else</code> giúp xử lý trường hợp khi điều kiện không đúng:</p>
+        <pre><code>
+if (condition) {
+    // Thực thi mã khi điều kiện đúng
+} else {
+    // Thực thi mã khi điều kiện sai
+}
+        </code></pre>
+
+        <h3>if...else if...else</h3>
+        <p>Câu lệnh <code>if...else if...else</code> dùng để kiểm tra nhiều điều kiện khác nhau:</p>
+        <pre><code>
+if (condition1) {
+    // Thực thi mã khi điều kiện 1 đúng
+} else if (condition2) {
+    // Thực thi mã khi điều kiện 2 đúng
+} else {
+    // Thực thi mã khi tất cả các điều kiện sai
+}
+        </code></pre>
+
+        <h2>2. Câu Lệnh Switch</h2>
+        <p>Câu lệnh <code>switch</code> cho phép kiểm tra nhiều giá trị khác nhau của một biến, giúp tránh việc sử dụng
+            nhiều câu lệnh <code>if...else if</code>.</p>
+        <pre><code>
+switch (expression) {
+    case value1:
+        // Thực thi khi expression === value1
+        break;
+    case value2:
+        // Thực thi khi expression === value2
+        break;
+    default:
+        // Thực thi khi không có trường hợp nào khớp
+}
+        </code></pre>
+
+        <h2>3. Cấu Trúc Lặp</h2>
+        <p>Cấu trúc lặp cho phép bạn thực thi một đoạn mã nhiều lần dựa trên một điều kiện nhất định.</p>
+
+        <h3>for</h3>
+        <p>Câu lệnh <code>for</code> dùng để lặp qua một khoảng thời gian xác định:</p>
+        <pre><code>
+for (let i = 0; i < 5; i++) {
+    // Thực thi mã lặp lại
+}
+        </code></pre>
+
+        <h3>while</h3>
+        <p>Câu lệnh <code>while</code> lặp cho đến khi điều kiện không còn đúng:</p>
+        <pre><code>
+while (condition) {
+    // Thực thi mã khi điều kiện đúng
+}
+        </code></pre>
+
+        <h3>do...while</h3>
+        <p>Câu lệnh <code>do...while</code> đảm bảo rằng mã trong khối lặp ít nhất sẽ được thực thi một lần:</p>
+        <pre><code>
+do {
+    // Thực thi mã ít nhất một lần
+} while (condition);
+        </code></pre>
+
+        <h2>4. Câu Lệnh Break và Continue</h2>
+        <p>Câu lệnh <code>break</code> dùng để thoát khỏi một vòng lặp, còn <code>continue</code> dùng để bỏ qua một
+            vòng lặp và tiếp tục với vòng lặp tiếp theo.</p>
+
+        <h3>Ví dụ với break:</h3>
+        <pre><code>
+for (let i = 0; i < 10; i++) {
+    if (i === 5) {
+        break; // Thoát khỏi vòng lặp khi i bằng 5
+    }
+}
+        </code></pre>
+
+        <h3>Ví dụ với continue:</h3>
+        <pre><code>
+for (let i = 0; i < 10; i++) {
+    if (i === 5) {
+        continue; // Bỏ qua khi i bằng 5
+    }
+    console.log(i);
+}
+        </code></pre>
+
+        <h2>5. Kết luận</h2>
+        <p>Cấu trúc điều khiển trong JavaScript là công cụ mạnh mẽ giúp bạn kiểm soát luồng chương trình, xử lý các điều
+            kiện và lặp lại các hành động. Việc nắm vững các cấu trúc này là rất quan trọng để phát triển các ứng dụng
+            hiệu quả và linh hoạt.</p>
+
+        <div class="video-container">
+            <h2>Video Minh Họa: Các Cấu Trúc Điều Khiển trong JavaScript</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/iVxQGnnj-bE"
+                title="Tìm hiểu cấu trúc điều khiển trong Javascript (Phần 1)" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div class="comment-section">
+            <h2>Bình luận</h2>
+            <p>[Phần bình luận để người đọc chia sẻ ý kiến và thảo luận thêm về bài viết.]</p>
+        </div>
+    </article>
+
+</body>
+
+</html>

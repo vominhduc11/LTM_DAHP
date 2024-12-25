@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ - Blog Java</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Mặc định cho các thiết bị lớn */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #0077cc;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1rem 0 0;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+            color: #ffcc00;
+        }
+
+        .categories {
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0;
+            gap: 1.5rem;
+        }
+
+        .category {
+            padding: 1rem;
+            background: #0077cc;
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+            width: 200px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .category:hover {
+            transform: scale(1.05);
+            background-color: #005fa3;
+        }
+
+        .category h3 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .posts {
+            max-width: 800px;
+            margin: 0 auto;
+            display: none;
+        }
+
+        .posts.active {
+            display: block;
+        }
+
+        .post {
+            background: white;
+            margin: 1rem 0;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease forwards;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .post img {
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .post-content {
+            flex: 1;
+        }
+
+        .post-content h4 {
+            margin: 0;
+            color: #0077cc;
+        }
+
+        .post-content p {
+            margin: 0.5rem 0;
+        }
+
+        .post-content a {
+            display: inline-block;
+            background: #0077cc;
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .post-content a:hover {
+            background: #005fa3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: #0077cc;
+            color: white;
+            margin-top: 2rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Responsive design with media queries for smaller screens */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            .categories {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .category {
+                width: 100%;
+                padding: 1rem;
+            }
+
+            .post {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .post img {
+                width: 100%;
+                height: auto;
+            }
+
+            .posts {
+                max-width: 100%;
+                padding: 0 1rem;
+            }
+
+            .post-content h4 {
+                font-size: 1.25rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .category {
+                font-size: 1.25rem;
+            }
+
+            .post-content h4 {
+                font-size: 1rem;
+            }
+
+            .post img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+    <script>
+        function togglePosts(category) {
+            document.querySelectorAll('.posts').forEach(postSection => {
+                postSection.classList.remove('active');
+            });
+            document.getElementById(category).classList.add('active');
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Blog Lập Trình Java & JavaScript</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="categories">
+            <div class="category" onclick="togglePosts('java')">
+                <h3>Java</h3>
+            </div>
+            <div class="category" onclick="togglePosts('javascript')">
+                <h3>JavaScript</h3>
+            </div>
+        </section>
+
+        <section id="java" class="posts">
+            <div class="post">
+                <img src="https://niithanoi.edu.vn/pic/News/gioi-thieu-ve-java-1.jpg" alt="Giới thiệu về Java">
+                <div class="post-content">
+                    <h4>Giới thiệu về Java</h4>
+                    <p>Đăng ngày: 1 tháng 1, 2025 bởi Võ Minh Đức</p>
+                    <a href="java1.html">Xem thêm</a>
+                </div>
+            </div>
+            <div class="post">
+                <img src="https://anhtester.com/uploads/lesson/thumb_post_lesson_selenium_java_new.jpg"
+                    alt="Cài đặt môi trường">
+                <div class="post-content">
+                    <h4>Cài đặt môi trường</h4>
+                    <p>Đăng ngày: 2 tháng 2, 2025 bởi Võ Minh Đức</p>
+                    <a href="java2.html">Xem thêm</a>
+                </div>
+            </div>
+            <div class="post">
+                <img src="https://topdev.vn/blog/wp-content/uploads/2022/12/Class-va-Object-trong-Java.png"
+                    alt="Các khái niệm cơ bản trong Java">
+                <div class="post-content">
+                    <h4>Các khái niệm cơ bản trong Java</h4>
+                    <p>Đăng ngày: 2 tháng 2, 2025 bởi Võ Minh Đức</p>
+                    <a href="java3.html">Xem thêm</a>
+                </div>
+            </div>
+            <div class="post">
+                <img src="https://aptech.fpt.edu.vn/wp-content/uploads/2022/12/cac-kieu-du-lieu-trong-java.jpg"
+                    alt="Biến và kiểu dữ liệu trong Java">
+                <div class="post-content">
+                    <h4>Biến và kiểu dữ liệu trong Java</h4>
+                    <p>Đăng ngày: 3 tháng 3, 2025 bởi Võ Minh Đức</p>
+                    <a href="java4.html">Xem thêm</a>
+                </div>
+            </div>
+            <div class="post">
+                <img src="https://i.ytimg.com/vi/hTHjCjBey3E/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAOS2XDn9z800MYCdiIH0snvgTlNQ"
+                    alt="Cấu trúc điều khiển trong Java">
+                <div class="post-content">
+                    <h4>Cấu trúc điều khiển trong Java</h4>
+                    <p>Đăng ngày: 4 tháng 4, 2025 bởi Võ Minh Đức</p>
+                    <a href="java5.html">Xem thêm</a>
+                </div>
+            </div>
+            <div class="post">
+                <img src="https://hanoi.codegym.vn/wp-content/uploads/sites/7/2022/11/phuong-thuoc-trong-java-la-gi.png"
+                    alt="Hàm và phương thức trong Java">
+                <div class="post-content">
+                    <h4>Hàm và phương thức trong Java</h4>
+                    <p>Đăng ngày: 5 tháng 5, 2025 bởi Võ Minh Đức</p>
+                    <a href="java6.html">Xem thêm</a>
+                </div>
+            </div>
+
+            <!-- Các bài viết khác tương tự -->
+        </section>
+
+        <section id="javascript" class="posts">
+            <div class="post">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.QCnzxf8aZsnNl5deAdvMpAHaEX&pid=Api"
+                    alt="Bài viết JavaScript 1">
+                <div class="post-content">
+                    <h4>Giới thiệu về JavaScript</h4>
+                    <p>Đăng ngày: 5 tháng 3, 2025 bởi Alice Brown</p>
+                    <a href="javascript1.html">Xem thêm</a>
+                </div>
+            </div>
+
+            <div class="post">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.6_UTSMwSy-5KiQ181p5uigHaEo&pid=Api"
+                    alt="Bài viết JavaScript 2">
+                <div class="post-content">
+                    <h4>Biến và Kiểu Dữ Liệu trong JavaScript</h4>
+                    <p>Đăng ngày: 6 tháng 3, 2025 bởi Alice Brown</p>
+                    <a href="javascript2.html">Xem thêm</a>
+                </div>
+            </div>
+
+            <div class="post">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.0ZGM7AmA5WLEjNtrocWj2gHaEK&pid=Api"
+                    alt="Bài viết JavaScript 3">
+                <div class="post-content">
+                    <h4>Các Cấu Trúc Điều Khiển trong JavaScript</h4>
+                    <p>Đăng ngày: 7 tháng 3, 2025 bởi Alice Brown</p>
+                    <a href="javascript3.html">Xem thêm</a>
+                </div>
+            </div>
+
+            <div class="post">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.frASPCFNQMokXJjfCYgUBAHaEK&pid=Api"
+                    alt="Bài viết JavaScript 4">
+                <div class="post-content">
+                    <h4>Hàm và Phương Thức trong JavaScript</h4>
+                    <p>Đăng ngày: 8 tháng 3, 2025 bởi Alice Brown</p>
+                    <a href="javascript4.html">Xem thêm</a>
+                </div>
+            </div>
+
+            <div class="post">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.gU66S5DqfgPQvJgYnJm-zQHaIS&pid=Api"
+                    alt="Bài viết JavaScript 5">
+                <div class="post-content">
+                    <h4>Vòng Lặp trong JavaScript</h4>
+                    <p>Đăng ngày: 9 tháng 3, 2025 bởi Alice Brown</p>
+                    <a href="javascript5.html">Xem thêm</a>
+                </div>
+            </div>
+
+            <!-- Các bài viết khác tương tự -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Blog Java của Nguyễn Văn A</p>
+    </footer>
+</body>
+
+</html>

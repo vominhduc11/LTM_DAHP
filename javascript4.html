@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hàm và Phương Thức trong JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        article {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        .video-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .comment-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #ddd;
+        }
+
+        /* Thêm các media query để làm responsive */
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            article {
+                margin: 15px;
+                padding: 15px;
+            }
+
+            .video-container {
+                margin: 15px 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            /* Đảm bảo video có thể bao phủ toàn bộ chiều rộng của container */
+            .video-container iframe {
+                width: 450px;
+                height: 255px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1.3em;
+            }
+
+            p {
+                font-size: 0.9em;
+            }
+
+            article {
+                margin: 10px;
+                padding: 10px;
+            }
+
+            .video-container {
+                margin: 10px 0;
+            }
+
+            .comment-section {
+                margin-top: 20px;
+                padding-top: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .video-container iframe {
+                width: 300px;
+                height: 170px;
+            }
+
+            h1 {
+                font-size: 1.3em;
+            }
+
+            h2 {
+                font-size: 1.1em;
+            }
+
+            p {
+                font-size: 0.85em;
+            }
+
+            article {
+                margin: 5px;
+                padding: 10px;
+            }
+
+            .video-container {
+                margin: 10px 0;
+            }
+
+            .comment-section {
+                margin-top: 15px;
+                padding-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Hàm và Phương Thức trong JavaScript</h1>
+    </header>
+
+    <article>
+        <h1>Hàm và Phương Thức trong JavaScript</h1>
+        <p>Hàm (Function) trong JavaScript là một khối mã được định nghĩa để thực thi một công việc cụ thể nào đó.
+            Phương thức (Method) là một loại hàm, nhưng nó được liên kết với một đối tượng. Trong bài viết này, chúng ta
+            sẽ tìm hiểu cách định nghĩa và sử dụng hàm và phương thức trong JavaScript.</p>
+
+        <h2>1. Định nghĩa Hàm trong JavaScript</h2>
+        <p>Hàm trong JavaScript được định nghĩa bằng từ khóa <code>function</code>. Hàm có thể nhận các tham số và trả
+            về một giá trị.</p>
+
+        <h3>Cấu trúc cơ bản của hàm</h3>
+        <pre><code>
+function tenHam(thamSo1, thamSo2) {
+    // Mã thực thi
+    return giaTri; // Trả về một giá trị (nếu có)
+}
+        </code></pre>
+
+        <h3>Ví dụ về hàm cơ bản</h3>
+        <pre><code>
+function chaoHoi() {
+    console.log("Xin chào!");
+}
+
+chaoHoi(); // Gọi hàm chào hỏi
+        </code></pre>
+
+        <p>Trong ví dụ trên, hàm <code>chaoHoi</code> không nhận tham số và chỉ thực thi một câu lệnh đơn giản là hiển
+            thị thông báo "Xin chào!" trên bảng điều khiển.</p>
+
+        <h2>2. Hàm với Tham Số và Giá Trị Trả Về</h2>
+        <p>Hàm có thể nhận các tham số và trả về một giá trị. Dưới đây là một ví dụ về hàm nhận tham số và trả về giá
+            trị:</p>
+        <pre><code>
+function tinhTong(a, b) {
+    return a + b;
+}
+
+let ketQua = tinhTong(5, 10);
+console.log(ketQua); // Kết quả là 15
+        </code></pre>
+
+        <h2>3. Phương Thức trong JavaScript</h2>
+        <p>Phương thức trong JavaScript là một hàm được định nghĩa trong một đối tượng. Dưới đây là một ví dụ về cách
+            tạo phương thức trong một đối tượng:</p>
+        <pre><code>
+let nguoi = {
+    ten: "Alice",
+    chaoHoi: function() {
+        console.log("Xin chào, " + this.ten);
+    }
+};
+
+nguoi.chaoHoi(); // Kết quả: Xin chào, Alice
+        </code></pre>
+
+        <p>Trong ví dụ trên, đối tượng <code>nguoi</code> có một phương thức <code>chaoHoi</code> để hiển thị lời chào.
+            Lưu ý rằng từ khóa <code>this</code> trong phương thức ám chỉ đến đối tượng hiện tại, tức là đối tượng
+            <code>nguoi</code>.
+        </p>
+
+        <h2>4. Hàm Ẩn Danh (Anonymous Functions)</h2>
+        <p>Hàm ẩn danh là những hàm không có tên, chúng thường được sử dụng khi cần một hàm tạm thời mà không cần phải
+            khai báo tên. Dưới đây là ví dụ về hàm ẩn danh:</p>
+        <pre><code>
+let bien = function() {
+    console.log("Đây là một hàm ẩn danh!");
+};
+
+bien(); // Gọi hàm ẩn danh
+        </code></pre>
+
+        <h2>5. Hàm Sử Dụng Hằng Số và Toán Tử</h2>
+        <p>JavaScript cũng hỗ trợ việc sử dụng hàm với các toán tử và hằng số trong chương trình.</p>
+        <pre><code>
+const PI = 3.14;
+
+function dienTichHinhTron(banKinh) {
+    return PI * banKinh * banKinh;
+}
+
+let dienTich = dienTichHinhTron(5);
+console.log(dienTich); // Kết quả: 78.5
+        </code></pre>
+
+        <h2>6. Kết luận</h2>
+        <p>Hàm và phương thức là hai khái niệm rất quan trọng trong JavaScript. Chúng giúp bạn tổ chức mã nguồn một cách
+            có cấu trúc, dễ bảo trì và tái sử dụng. Việc nắm vững cách tạo và sử dụng hàm sẽ giúp bạn lập trình hiệu quả
+            hơn.</p>
+
+        <div class="video-container">
+            <h2>Video Minh Họa: Hàm và Phương Thức trong JavaScript</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/4g9ENVc2KLA"
+                title="Hàm trong JavaScript | JavaScript function" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div class="comment-section">
+            <h2>Bình luận</h2>
+            <p>[Phần bình luận để người đọc chia sẻ ý kiến và thảo luận thêm về bài viết.]</p>
+        </div>
+    </article>
+
+</body>
+
+</html>

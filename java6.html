@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hàm và Phương Thức trong Java</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        article {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        .video-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .comment-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #ddd;
+        }
+
+        /* Thêm các media query để làm responsive */
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            article {
+                margin: 15px;
+                padding: 15px;
+            }
+
+            .video-container {
+                margin: 15px 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            /* Đảm bảo video có thể bao phủ toàn bộ chiều rộng của container */
+            .video-container iframe {
+                width: 450px;
+                height: 255px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1.3em;
+            }
+
+            p {
+                font-size: 0.9em;
+            }
+
+            article {
+                margin: 10px;
+                padding: 10px;
+            }
+
+            .video-container {
+                margin: 10px 0;
+            }
+
+            .comment-section {
+                margin-top: 20px;
+                padding-top: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .video-container iframe {
+                width: 300px;
+                height: 170px;
+            }
+
+            h1 {
+                font-size: 1.3em;
+            }
+
+            h2 {
+                font-size: 1.1em;
+            }
+
+            p {
+                font-size: 0.85em;
+            }
+
+            article {
+                margin: 5px;
+                padding: 10px;
+            }
+
+            .video-container {
+                margin: 10px 0;
+            }
+
+            .comment-section {
+                margin-top: 15px;
+                padding-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Hàm và Phương Thức trong Java</h1>
+    </header>
+
+    <article>
+        <h1>Hàm và Phương Thức trong Java</h1>
+        <p>Trong Java, hàm và phương thức là những khái niệm quan trọng giúp tổ chức mã nguồn hiệu quả và tái sử dụng
+            các đoạn mã. Phương thức (method) là một khối mã có thể được gọi và thực thi tại nhiều điểm trong chương
+            trình.</p>
+
+        <h2>1. Phương Thức trong Java</h2>
+        <p>Phương thức trong Java là một đoạn mã được nhóm lại với nhau để thực hiện một nhiệm vụ cụ thể. Phương thức có
+            thể nhận vào tham số và trả về một giá trị.</p>
+
+        <ul>
+            <li><strong>Cấu trúc của phương thức:</strong></li>
+            <pre><code>return_type method_name(parameters) {
+    // Code to be executed
+    return return_value;
+}</code></pre>
+
+            <li><strong>Ví dụ về phương thức không trả về giá trị:</strong></li>
+            <pre><code>public void sayHello() {
+    System.out.println("Hello, Java!");
+}</code></pre>
+
+            <li><strong>Ví dụ về phương thức có giá trị trả về:</strong></li>
+            <pre><code>public int addNumbers(int a, int b) {
+    return a + b;
+}</code></pre>
+        </ul>
+
+        <h2>2. Hàm trong Java</h2>
+        <p>Trong Java, hàm thường được gọi là phương thức. Tuy nhiên, trong các ngôn ngữ khác, hàm và phương thức có thể
+            có sự khác biệt. Hàm thường không thuộc một đối tượng cụ thể, trong khi phương thức là một phần của lớp hoặc
+            đối tượng.</p>
+
+        <h2>3. Phân Biệt Hàm và Phương Thức</h2>
+        <p>Ở Java, không có sự khác biệt rõ ràng giữa hàm và phương thức. Tuy nhiên, bạn có thể hiểu theo các cách sau:
+        </p>
+        <ul>
+            <li><strong>Phương thức:</strong> Là thành phần của một lớp hoặc đối tượng trong Java, luôn liên kết với một
+                lớp hoặc đối tượng cụ thể.</li>
+            <li><strong>Hàm:</strong> Thực tế, trong Java, các phương thức được gọi là hàm, nhưng khác biệt so với một
+                số ngôn ngữ lập trình khác, hàm có thể không liên kết với một đối tượng cụ thể.</li>
+        </ul>
+
+        <h2>4. Các Loại Phương Thức trong Java</h2>
+        <p>Có hai loại phương thức trong Java: phương thức tĩnh (static) và phương thức không tĩnh (instance).</p>
+
+        <ul>
+            <li><strong>Phương thức tĩnh:</strong> Là phương thức mà không cần tạo đối tượng của lớp để gọi. Phương thức
+                tĩnh được khai báo với từ khóa <code>static</code>.</li>
+            <pre><code>public static void printMessage() {
+    System.out.println("This is a static method.");
+}</code></pre>
+
+            <li><strong>Phương thức không tĩnh (instance):</strong> Là phương thức được gọi thông qua đối tượng của lớp.
+            </li>
+            <pre><code>public void printMessage() {
+    System.out.println("This is an instance method.");
+}</code></pre>
+        </ul>
+
+        <h2>5. Ví Dụ về Phương Thức trong Java</h2>
+        <p>Dưới đây là một ví dụ về cách sử dụng phương thức trong Java:</p>
+        <pre><code>
+public class MethodExample {
+    // Phương thức tĩnh
+    public static void staticMethod() {
+        System.out.println("Đây là phương thức tĩnh.");
+    }
+
+    // Phương thức không tĩnh
+    public void instanceMethod() {
+        System.out.println("Đây là phương thức không tĩnh.");
+    }
+
+    public static void main(String[] args) {
+        // Gọi phương thức tĩnh mà không cần tạo đối tượng
+        staticMethod();
+
+        // Gọi phương thức không tĩnh cần tạo đối tượng
+        MethodExample obj = new MethodExample();
+        obj.instanceMethod();
+    }
+}
+        </code></pre>
+
+        <h2>6. Kết luận</h2>
+        <p>Phương thức trong Java là thành phần quan trọng giúp tổ chức mã nguồn và làm cho mã trở nên dễ bảo trì. Việc
+            phân biệt giữa các loại phương thức và hiểu rõ cách sử dụng chúng giúp bạn phát triển các ứng dụng Java hiệu
+            quả hơn.</p>
+
+        <div class="comment-section">
+            <h2>Bình luận</h2>
+            <p>[Phần bình luận để người đọc chia sẻ ý kiến và thảo luận thêm về bài viết.]</p>
+        </div>
+    </article>
+
+</body>
+
+</html>

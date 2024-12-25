@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biến và Kiểu Dữ Liệu trong Java</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        article {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        .video-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .comment-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #ddd;
+        }
+
+        /* Thêm các media query để làm responsive */
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            article {
+                margin: 15px;
+                padding: 15px;
+            }
+
+            .video-container {
+                margin: 15px 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            /* Đảm bảo video có thể bao phủ toàn bộ chiều rộng của container */
+            .video-container iframe {
+                width: 450px;
+                height: 255px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1.3em;
+            }
+
+            p {
+                font-size: 0.9em;
+            }
+
+            article {
+                margin: 10px;
+                padding: 10px;
+            }
+
+            .video-container {
+                margin: 10px 0;
+            }
+
+            .comment-section {
+                margin-top: 20px;
+                padding-top: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .video-container iframe {
+                width: 300px;
+                height: 170px;
+            }
+
+            h1 {
+                font-size: 1.3em;
+            }
+
+            h2 {
+                font-size: 1.1em;
+            }
+
+            p {
+                font-size: 0.85em;
+            }
+
+            article {
+                margin: 5px;
+                padding: 10px;
+            }
+
+            .video-container {
+                margin: 10px 0;
+            }
+
+            .comment-section {
+                margin-top: 15px;
+                padding-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Biến và Kiểu Dữ Liệu trong Java</h1>
+    </header>
+
+    <article>
+        <h1>Biến và Kiểu Dữ Liệu trong Java</h1>
+        <p>Trong Java, biến là nơi lưu trữ dữ liệu. Kiểu dữ liệu xác định loại dữ liệu mà biến có thể chứa. Việc chọn
+            kiểu dữ liệu phù hợp rất quan trọng để tối ưu hóa bộ nhớ và hiệu suất của chương trình.</p>
+
+        <h2>1. Biến trong Java</h2>
+        <p>Biến là một vùng nhớ trong bộ nhớ máy tính dùng để lưu trữ giá trị. Mỗi biến trong Java đều phải được khai
+            báo với tên và kiểu dữ liệu cụ thể. Biến có thể chứa các giá trị khác nhau trong suốt vòng đời của chương
+            trình.</p>
+
+        <ul>
+            <li><strong>Cách khai báo biến:</strong></li>
+            <pre><code>dataType variableName;</code></pre>
+            <p>Ví dụ: <code>int age;</code></p>
+
+            <li><strong>Khởi tạo biến:</strong></li>
+            <pre><code>variableName = value;</code></pre>
+            <p>Ví dụ: <code>age = 25;</code></p>
+
+            <li><strong>Khởi tạo và khai báo biến cùng lúc:</strong></li>
+            <pre><code>int age = 25;</code></pre>
+        </ul>
+
+        <h2>2. Kiểu Dữ Liệu trong Java</h2>
+        <p>Java có nhiều kiểu dữ liệu khác nhau, chia thành hai loại chính: kiểu dữ liệu nguyên thủy và kiểu dữ liệu
+            tham chiếu.</p>
+
+        <h3>Kiểu Dữ Liệu Nguyên Thủy (Primitive Data Types)</h3>
+        <p>Các kiểu dữ liệu nguyên thủy là các kiểu dữ liệu cơ bản mà Java hỗ trợ. Chúng bao gồm:</p>
+        <ul>
+            <li><strong>byte:</strong> Kiểu số nguyên 8-bit, giá trị từ -128 đến 127.</li>
+            <li><strong>short:</strong> Kiểu số nguyên 16-bit, giá trị từ -32,768 đến 32,767.</li>
+            <li><strong>int:</strong> Kiểu số nguyên 32-bit, giá trị từ -2,147,483,648 đến 2,147,483,647.</li>
+            <li><strong>long:</strong> Kiểu số nguyên 64-bit, giá trị từ -9,223,372,036,854,775,808 đến
+                9,223,372,036,854,775,807.</li>
+            <li><strong>float:</strong> Kiểu số thực 32-bit, dùng để lưu trữ giá trị thập phân.</li>
+            <li><strong>double:</strong> Kiểu số thực 64-bit, có độ chính xác cao hơn float.</li>
+            <li><strong>char:</strong> Kiểu ký tự 16-bit, đại diện cho một ký tự Unicode (ví dụ: 'A', '1').</li>
+            <li><strong>boolean:</strong> Kiểu logic, chỉ có hai giá trị: <code>true</code> và <code>false</code>.</li>
+        </ul>
+
+        <h3>Kiểu Dữ Liệu Tham Chiếu (Reference Data Types)</h3>
+        <p>Các kiểu dữ liệu tham chiếu không lưu trữ giá trị mà lưu trữ địa chỉ của đối tượng trong bộ nhớ. Ví dụ về
+            kiểu dữ liệu tham chiếu là:</p>
+        <ul>
+            <li><strong>String:</strong> Kiểu chuỗi, dùng để lưu trữ các ký tự.</li>
+            <li><strong>Arrays:</strong> Dùng để lưu trữ nhiều giá trị của cùng một kiểu dữ liệu.</li>
+            <li><strong>Class:</strong> Các lớp (classes) định nghĩa các đối tượng trong Java.</li>
+            <li><strong>Interface:</strong> Định nghĩa các phương thức mà các lớp phải triển khai.</li>
+        </ul>
+
+        <h2>3. Ví Dụ về Biến và Kiểu Dữ Liệu</h2>
+        <p>Dưới đây là một ví dụ về cách khai báo và sử dụng biến trong Java:</p>
+        <pre><code>
+public class Main {
+    public static void main(String[] args) {
+        // Khai báo và khởi tạo biến
+        int age = 25;
+        double price = 19.99;
+        boolean isJavaFun = true;
+        char grade = 'A';
+
+        // In giá trị của các biến
+        System.out.println("Age: " + age);
+        System.out.println("Price: " + price);
+        System.out.println("Is Java fun? " + isJavaFun);
+        System.out.println("Grade: " + grade);
+    }
+}
+        </code></pre>
+
+        <h2>4. Kết luận</h2>
+        <p>Biến và kiểu dữ liệu là những khái niệm cơ bản nhưng vô cùng quan trọng trong Java. Việc hiểu rõ cách khai
+            báo và sử dụng biến sẽ giúp bạn quản lý và xử lý dữ liệu trong chương trình một cách hiệu quả hơn. Chúc bạn
+            học tốt và thành công trong việc lập trình Java!</p>
+
+        <div class="comment-section">
+            <h2>Bình luận</h2>
+            <p>[Phần bình luận để người đọc chia sẻ ý kiến và thảo luận thêm về bài viết.]</p>
+        </div>
+    </article>
+
+</body>
+
+</html>

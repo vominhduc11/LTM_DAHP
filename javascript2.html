@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biến và Kiểu Dữ Liệu trong JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        article {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        .video-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .comment-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #ddd;
+        }
+
+        /* Thêm các media query để làm responsive */
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            article {
+                margin: 15px;
+                padding: 15px;
+            }
+
+            .video-container {
+                margin: 15px 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            /* Đảm bảo video có thể bao phủ toàn bộ chiều rộng của container */
+            .video-container iframe {
+                width: 450px;
+                height: 255px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1.3em;
+            }
+
+            p {
+                font-size: 0.9em;
+            }
+
+            article {
+                margin: 10px;
+                padding: 10px;
+            }
+
+            .video-container {
+                margin: 10px 0;
+            }
+
+            .comment-section {
+                margin-top: 20px;
+                padding-top: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .video-container iframe {
+                width: 300px;
+                height: 170px;
+            }
+
+            h1 {
+                font-size: 1.3em;
+            }
+
+            h2 {
+                font-size: 1.1em;
+            }
+
+            p {
+                font-size: 0.85em;
+            }
+
+            article {
+                margin: 5px;
+                padding: 10px;
+            }
+
+            .video-container {
+                margin: 10px 0;
+            }
+
+            .comment-section {
+                margin-top: 15px;
+                padding-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Biến và Kiểu Dữ Liệu trong JavaScript</h1>
+    </header>
+
+    <article>
+        <h1>Biến và Kiểu Dữ Liệu trong JavaScript</h1>
+        <p>Trong JavaScript, các biến và kiểu dữ liệu là những khái niệm cơ bản và rất quan trọng. Việc hiểu rõ về biến
+            và kiểu dữ liệu sẽ giúp bạn lập trình hiệu quả và tránh được các lỗi không mong muốn trong quá trình phát
+            triển ứng dụng.</p>
+
+        <h2>1. Biến trong JavaScript</h2>
+        <p>Biến trong JavaScript là những đại diện cho dữ liệu mà bạn có thể lưu trữ và thay đổi trong suốt quá trình
+            thực thi chương trình. Có ba cách để khai báo biến trong JavaScript:</p>
+        <ul>
+            <li><strong>var</strong>: Đây là cách khai báo biến truyền thống, nhưng hiện nay ít được sử dụng vì có một
+                số hạn chế về phạm vi.</li>
+            <li><strong>let</strong>: Được sử dụng thay cho <code>var</code>, có phạm vi trong block và giúp tránh những
+                vấn đề liên quan đến phạm vi.</li>
+            <li><strong>const</strong>: Dùng để khai báo các biến không thể thay đổi giá trị sau khi đã được gán.</li>
+        </ul>
+
+        <h3>Ví dụ về khai báo biến:</h3>
+        <pre><code>
+        let name = "John";
+        const age = 25;
+        var city = "Hanoi";
+        </code></pre>
+
+        <h2>2. Kiểu Dữ Liệu trong JavaScript</h2>
+        <p>JavaScript hỗ trợ một số kiểu dữ liệu cơ bản mà bạn có thể sử dụng để lưu trữ thông tin:</p>
+        <ul>
+            <li><strong>String (Chuỗi):</strong> Dùng để lưu trữ văn bản. Ví dụ: <code>"Hello World"</code></li>
+            <li><strong>Number (Số):</strong> Dùng để lưu trữ các giá trị số học. Ví dụ: <code>25, 3.14</code></li>
+            <li><strong>Boolean (Kiểu logic):</strong> Dùng để lưu trữ các giá trị đúng/sai (true/false).</li>
+            <li><strong>Object (Đối tượng):</strong> Dùng để lưu trữ các cặp key-value, là kiểu dữ liệu phức tạp.</li>
+            <li><strong>Array (Mảng):</strong> Dùng để lưu trữ danh sách các giá trị. Ví dụ: <code>[1, 2, 3, 4]</code>
+            </li>
+            <li><strong>Null:</strong> Một kiểu đặc biệt chỉ có một giá trị duy nhất là <code>null</code>, dùng để chỉ
+                sự không tồn tại.</li>
+            <li><strong>Undefined:</strong> Kiểu này chỉ giá trị không được xác định hoặc biến chưa được gán giá trị.
+            </li>
+            <li><strong>Symbol (Biểu tượng):</strong> Một kiểu dữ liệu đặc biệt thường dùng trong lập trình phức tạp.
+            </li>
+        </ul>
+
+        <h3>Ví dụ về các kiểu dữ liệu:</h3>
+        <pre><code>
+        let name = "Alice"; // String
+        let age = 30; // Number
+        let isActive = true; // Boolean
+        let user = { name: "Alice", age: 30 }; // Object
+        let numbers = [1, 2, 3, 4]; // Array
+        let result = null; // Null
+        let undefinedValue; // Undefined
+        </code></pre>
+
+        <h2>3. Chuyển đổi kiểu dữ liệu (Type Conversion)</h2>
+        <p>Trong JavaScript, đôi khi bạn cần phải chuyển đổi giữa các kiểu dữ liệu. JavaScript cung cấp các phương thức
+            như <code>String()</code>, <code>Number()</code>, <code>Boolean()</code> để thực hiện việc chuyển đổi này.
+        </p>
+
+        <h3>Ví dụ về chuyển đổi kiểu dữ liệu:</h3>
+        <pre><code>
+        let num = "123";
+        let convertedNumber = Number(num); // Chuyển từ String sang Number
+
+        let bool = 1;
+        let convertedBoolean = Boolean(bool); // Chuyển từ Number sang Boolean
+        </code></pre>
+
+        <h2>4. Kết luận</h2>
+        <p>Hiểu rõ về biến và kiểu dữ liệu trong JavaScript sẽ giúp bạn dễ dàng xử lý dữ liệu và tránh được các lỗi phổ
+            biến khi lập trình. Hãy thử tạo các biến và sử dụng các kiểu dữ liệu trong JavaScript để làm quen và cải
+            thiện kỹ năng lập trình của bạn!</p>
+
+        <div class="video-container">
+            <h2>Video Minh Họa: Biến và Kiểu Dữ Liệu trong JavaScript</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/P-fMQ3elxSE"
+                title="Kiểu dữ liệu trong JavaScript | Các kiểu dữ liệu JS" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div class="comment-section">
+            <h2>Bình luận</h2>
+            <p>[Phần bình luận để người đọc chia sẻ ý kiến và thảo luận thêm về bài viết.]</p>
+        </div>
+    </article>
+
+</body>
+
+</html>

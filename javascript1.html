@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới Thiệu về JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        article {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        .video-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .comment-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #ddd;
+        }
+
+        /* Thêm các media query để làm responsive */
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            article {
+                margin: 15px;
+                padding: 15px;
+            }
+
+            .video-container {
+                margin: 15px 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            /* Đảm bảo video có thể bao phủ toàn bộ chiều rộng của container */
+            .video-container iframe {
+                width: 450px;
+                height: 255px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1.3em;
+            }
+
+            p {
+                font-size: 0.9em;
+            }
+
+            article {
+                margin: 10px;
+                padding: 10px;
+            }
+
+            .video-container {
+                margin: 10px 0;
+            }
+
+            .comment-section {
+                margin-top: 20px;
+                padding-top: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .video-container iframe {
+                width: 300px;
+                height: 170px;
+            }
+
+            h1 {
+                font-size: 1.3em;
+            }
+
+            h2 {
+                font-size: 1.1em;
+            }
+
+            p {
+                font-size: 0.85em;
+            }
+
+            article {
+                margin: 5px;
+                padding: 10px;
+            }
+
+            .video-container {
+                margin: 10px 0;
+            }
+
+            .comment-section {
+                margin-top: 15px;
+                padding-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Giới Thiệu về JavaScript</h1>
+    </header>
+
+    <article>
+        <h1>Giới Thiệu về JavaScript</h1>
+        <p>JavaScript là một ngôn ngữ lập trình mạnh mẽ và phổ biến được sử dụng để tạo các trang web động và tương tác.
+            JavaScript hoạt động trên trình duyệt web và cho phép bạn thay đổi nội dung, kiểm tra người dùng, tạo các
+            hiệu ứng động và nhiều tính năng khác trên trang web.</p>
+
+        <h2>1. JavaScript là gì?</h2>
+        <p>JavaScript là một ngôn ngữ lập trình cấp cao, không phải máy tính, được sử dụng chủ yếu để phát triển web. Nó
+            được dùng để tạo các phần tử động và tương tác trên các trang web. JavaScript có thể thực hiện các tác vụ
+            như:</p>
+        <ul>
+            <li>Thay đổi nội dung trang web mà không cần tải lại.</li>
+            <li>Tạo các hiệu ứng động như ẩn/hiện, chuyển động.</li>
+            <li>Kiểm tra và xử lý dữ liệu người dùng nhập vào.</li>
+            <li>Giao tiếp với máy chủ để lấy hoặc gửi dữ liệu mà không cần làm mới trang.</li>
+        </ul>
+
+        <h2>2. Cấu Trúc Cơ Bản của JavaScript</h2>
+        <p>JavaScript có cấu trúc đơn giản và dễ học. Một đoạn mã JavaScript cơ bản có thể bao gồm các biến, điều kiện,
+            vòng lặp và hàm. Dưới đây là một ví dụ cơ bản:</p>
+        <pre><code>
+        // Khai báo biến
+        let name = "JavaScript";
+        // Hàm in ra màn hình
+        function greet() {
+            console.log("Chào mừng bạn đến với " + name);
+        }
+        greet();
+        </code></pre>
+
+        <h2>3. Lợi Ích của JavaScript</h2>
+        <p>JavaScript mang lại nhiều lợi ích cho các nhà phát triển web, bao gồm:</p>
+        <ul>
+            <li><strong>Khả năng tương tác cao:</strong> JavaScript cho phép trang web phản hồi nhanh chóng với người
+                dùng mà không cần phải tải lại trang.</li>
+            <li><strong>Chạy trên trình duyệt:</strong> JavaScript chạy trực tiếp trên trình duyệt của người dùng, giảm
+                tải cho máy chủ.</li>
+            <li><strong>Đa dạng ứng dụng:</strong> Ngoài việc phát triển web, JavaScript còn được sử dụng trong phát
+                triển ứng dụng di động (React Native), ứng dụng máy tính để bàn (Electron), và ngay cả trong lập trình
+                game.</li>
+        </ul>
+
+        <h2>4. Ví Dụ về JavaScript</h2>
+        <p>Dưới đây là một ví dụ đơn giản về việc thay đổi nội dung của một trang web bằng JavaScript:</p>
+        <pre><code>
+        <button onclick="changeText()">Click me</button>
+        <p id="demo">Hello World!</p>
+
+        <script>
+            function changeText() {
+                document.getElementById("demo").innerHTML = "Chào bạn!";
+            }
+        </script>
+        </code></pre>
+
+        <h2>5. JavaScript và HTML/CSS</h2>
+        <p>JavaScript có thể kết hợp mạnh mẽ với HTML và CSS để tạo ra các trang web động và tương tác. HTML tạo cấu
+            trúc cho trang web, CSS tạo kiểu dáng, và JavaScript thêm sự tương tác và động lực cho trang web.</p>
+
+        <div class="video-container">
+            <h2>Video Minh Họa: Giới Thiệu về JavaScript</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/O_-WyAck4u0"
+                title="Bài 1.1. Giới thiệu tổng quan về Javascript" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <h2>6. Kết luận</h2>
+        <p>JavaScript là một ngôn ngữ không thể thiếu trong phát triển web hiện đại. Việc nắm vững JavaScript sẽ giúp
+            bạn tạo ra những ứng dụng và trang web tương tác, đáp ứng được yêu cầu của người dùng hiện đại. Nếu bạn muốn
+            phát triển nghề lập trình web, việc học JavaScript là một bước quan trọng không thể thiếu.</p>
+
+        <div class="comment-section">
+            <h2>Bình luận</h2>
+            <p>[Phần bình luận để người đọc chia sẻ ý kiến và thảo luận thêm về bài viết.]</p>
+        </div>
+    </article>
+
+</body>
+
+</html>

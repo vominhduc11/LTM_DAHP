@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Các Khái Niệm Cơ Bản trong Java</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        article {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        .video-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .comment-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #ddd;
+        }
+
+        /* Thêm các media query để làm responsive */
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            article {
+                margin: 15px;
+                padding: 15px;
+            }
+
+            .video-container {
+                margin: 15px 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            /* Đảm bảo video có thể bao phủ toàn bộ chiều rộng của container */
+            .video-container iframe {
+                width: 450px;
+                height: 255px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1.3em;
+            }
+
+            p {
+                font-size: 0.9em;
+            }
+
+            article {
+                margin: 10px;
+                padding: 10px;
+            }
+
+            .video-container {
+                margin: 10px 0;
+            }
+
+            .comment-section {
+                margin-top: 20px;
+                padding-top: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .video-container iframe {
+                width: 300px;
+                height: 170px;
+            }
+
+            h1 {
+                font-size: 1.3em;
+            }
+
+            h2 {
+                font-size: 1.1em;
+            }
+
+            p {
+                font-size: 0.85em;
+            }
+
+            article {
+                margin: 5px;
+                padding: 10px;
+            }
+
+            .video-container {
+                margin: 10px 0;
+            }
+
+            .comment-section {
+                margin-top: 15px;
+                padding-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Các Khái Niệm Cơ Bản trong Java</h1>
+    </header>
+
+    <article>
+        <h1>Các Khái Niệm Cơ Bản trong Java</h1>
+        <p>Java là một ngôn ngữ lập trình hướng đối tượng mạnh mẽ, được sử dụng phổ biến trong phát triển phần mềm, đặc
+            biệt là các ứng dụng di động và web. Trong bài viết này, chúng ta sẽ tìm hiểu một số khái niệm cơ bản của
+            Java giúp bạn hiểu rõ hơn về ngôn ngữ này.</p>
+
+        <h2>1. Lớp và Đối Tượng (Class và Object)</h2>
+        <p>Trong Java, mọi thứ đều là đối tượng (Object). Mỗi đối tượng được mô tả bằng một lớp (Class). Lớp là một
+            khuôn mẫu, một bản thiết kế mô tả các thuộc tính và hành vi của đối tượng.</p>
+        <ul>
+            <li><strong>Lớp (Class):</strong> Là một tập hợp các đối tượng có cùng kiểu. Nó chứa các phương thức (hành
+                vi) và thuộc tính (dữ liệu).</li>
+            <li><strong>Đối tượng (Object):</strong> Là một thể hiện cụ thể của lớp, mang giá trị dữ liệu và có thể thực
+                thi các phương thức của lớp.</li>
+        </ul>
+
+        <h2>2. Biến và Kiểu Dữ Liệu</h2>
+        <p>Trong Java, biến được sử dụng để lưu trữ dữ liệu và phải được khai báo với kiểu dữ liệu cụ thể.</p>
+        <ul>
+            <li><strong>Biến (Variable):</strong> Là một tên đại diện cho một giá trị dữ liệu.</li>
+            <li><strong>Kiểu dữ liệu (Data Type):</strong> Quyết định loại dữ liệu mà biến có thể lưu trữ, ví dụ: int,
+                double, String.</li>
+        </ul>
+
+        <h2>3. Phương Thức (Method)</h2>
+        <p>Phương thức là một khối mã có thể thực thi được trong một lớp. Phương thức thực hiện một hành động nào đó và
+            có thể trả về kết quả.</p>
+        <ul>
+            <li><strong>Phương thức (Method):</strong> Là các hàm hoặc hành động mà đối tượng của lớp có thể thực hiện.
+            </li>
+            <li><strong>Phương thức trả về (Return Method):</strong> Là phương thức trả về một giá trị sau khi thực thi.
+            </li>
+        </ul>
+
+        <h2>4. Kế Thừa (Inheritance)</h2>
+        <p>Java hỗ trợ tính kế thừa, cho phép một lớp kế thừa các đặc tính và hành vi của lớp khác. Lớp con sẽ kế thừa
+            tất cả các thuộc tính và phương thức của lớp cha, đồng thời có thể định nghĩa thêm các thuộc tính và phương
+            thức riêng.</p>
+        <ul>
+            <li><strong>Kế thừa (Inheritance):</strong> Là cơ chế cho phép lớp con sử dụng lại các thuộc tính và phương
+                thức của lớp cha.</li>
+            <li><strong>Lớp cha (Superclass):</strong> Là lớp được kế thừa.</li>
+            <li><strong>Lớp con (Subclass):</strong> Là lớp kế thừa.</li>
+        </ul>
+
+        <h2>5. Đa Hình (Polymorphism)</h2>
+        <p>Đa hình trong Java cho phép các đối tượng thuộc các lớp khác nhau có thể thực thi các phương thức giống nhau
+            nhưng với hành vi khác nhau.</p>
+        <ul>
+            <li><strong>Đa hình (Polymorphism):</strong> Là khả năng thực thi các phương thức với tên giống nhau nhưng
+                có cách thực hiện khác nhau tùy theo đối tượng.</li>
+        </ul>
+
+        <h2>6. Lớp Trừu Tượng và Giao Diện (Abstract Class và Interface)</h2>
+        <p>Các lớp trừu tượng và giao diện giúp xác định các phương thức mà các lớp con phải triển khai, nhưng không
+            chứa chi tiết triển khai.</p>
+        <ul>
+            <li><strong>Lớp trừu tượng (Abstract Class):</strong> Là lớp không thể tạo đối tượng và có thể chứa các
+                phương thức trừu tượng mà lớp con phải triển khai.</li>
+            <li><strong>Giao diện (Interface):</strong> Là một tập hợp các phương thức mà các lớp con phải triển khai,
+                nhưng không chứa bất kỳ mã triển khai nào.</li>
+        </ul>
+
+        <h2>Ví Dụ về Mã Java Cơ Bản</h2>
+        <p>Dưới đây là một ví dụ về chương trình Java đơn giản để minh họa một số khái niệm cơ bản:</p>
+        <pre><code>
+public class Main {
+    public static void main(String[] args) {
+        // Khởi tạo đối tượng của lớp Person
+        Person person = new Person("Alice", 25);
+        
+        // Gọi phương thức sayHello
+        person.sayHello();
+    }
+}
+
+class Person {
+    String name;
+    int age;
+
+    // Constructor
+    Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Phương thức
+    void sayHello() {
+        System.out.println("Hello, my name is " + name + " and I am " + age + " years old.");
+    }
+}
+        </code></pre>
+
+        <div class="video-container">
+            <h2>Video Minh Họa: Các Khái Niệm Cơ Bản trong Java</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/7L0RLrfrBHE?si=fuf8k6jFf0Cn1hKU"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
+        <h2>Kết luận</h2>
+        <p>Java là một ngôn ngữ lập trình mạnh mẽ và linh hoạt. Hiểu rõ các khái niệm cơ bản trong Java là bước đầu tiên
+            để bạn có thể xây dựng các ứng dụng phức tạp và hiệu quả. Chúc bạn học tốt và thành công trong hành trình
+            lập trình Java!</p>
+
+        <div class="comment-section">
+            <h2>Bình luận</h2>
+            <p>[Phần bình luận để người đọc chia sẻ ý kiến và thảo luận thêm về bài viết.]</p>
+        </div>
+    </article>
+
+</body>
+
+</html>

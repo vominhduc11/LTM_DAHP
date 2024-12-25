@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vòng Lặp trong JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        article {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        .video-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .comment-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #ddd;
+        }
+
+        /* Thêm các media query để làm responsive */
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            article {
+                margin: 15px;
+                padding: 15px;
+            }
+
+            .video-container {
+                margin: 15px 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            /* Đảm bảo video có thể bao phủ toàn bộ chiều rộng của container */
+            .video-container iframe {
+                width: 450px;
+                height: 255px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1.3em;
+            }
+
+            p {
+                font-size: 0.9em;
+            }
+
+            article {
+                margin: 10px;
+                padding: 10px;
+            }
+
+            .video-container {
+                margin: 10px 0;
+            }
+
+            .comment-section {
+                margin-top: 20px;
+                padding-top: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .video-container iframe {
+                width: 300px;
+                height: 170px;
+            }
+
+            h1 {
+                font-size: 1.3em;
+            }
+
+            h2 {
+                font-size: 1.1em;
+            }
+
+            p {
+                font-size: 0.85em;
+            }
+
+            article {
+                margin: 5px;
+                padding: 10px;
+            }
+
+            .video-container {
+                margin: 10px 0;
+            }
+
+            .comment-section {
+                margin-top: 15px;
+                padding-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Vòng Lặp trong JavaScript</h1>
+    </header>
+
+    <article>
+        <h1>Vòng Lặp trong JavaScript</h1>
+        <p>Vòng lặp là một trong những công cụ quan trọng trong lập trình, giúp lặp đi lặp lại một đoạn mã nhiều lần.
+            Trong JavaScript, có nhiều loại vòng lặp khác nhau, mỗi loại có những ứng dụng riêng. Trong bài viết này,
+            chúng ta sẽ tìm hiểu các loại vòng lặp cơ bản trong JavaScript.</p>
+
+        <h2>1. Vòng Lặp <code>for</code></h2>
+        <p>Vòng lặp <code>for</code> là loại vòng lặp phổ biến nhất, thường được sử dụng khi bạn biết số lần cần lặp
+            trước. Cấu trúc cơ bản của vòng lặp <code>for</code> như sau:</p>
+        <pre><code>
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+        </code></pre>
+        <p>Trong ví dụ trên, vòng lặp sẽ in ra các số từ 0 đến 4. Chúng ta có thể điều chỉnh điều kiện lặp để thay đổi
+            số lần lặp hoặc giá trị được in ra.</p>
+
+        <h2>2. Vòng Lặp <code>while</code></h2>
+        <p>Vòng lặp <code>while</code> được sử dụng khi bạn muốn lặp cho đến khi một điều kiện nào đó không còn đúng.
+            Cấu trúc cơ bản của vòng lặp <code>while</code> như sau:</p>
+        <pre><code>
+let i = 0;
+while (i < 5) {
+    console.log(i);
+    i++;
+}
+        </code></pre>
+        <p>Vòng lặp này sẽ in ra các số từ 0 đến 4, tương tự như vòng lặp <code>for</code>. Tuy nhiên, với
+            <code>while</code>, bạn phải tự kiểm tra điều kiện và thay đổi giá trị của biến lặp (ở đây là
+            <code>i</code>) trong mỗi vòng lặp.
+        </p>
+
+        <h2>3. Vòng Lặp <code>do...while</code></h2>
+        <p>Vòng lặp <code>do...while</code> tương tự như vòng lặp <code>while</code>, nhưng khác ở chỗ nó luôn thực hiện
+            ít nhất một lần, ngay cả khi điều kiện ban đầu là sai.</p>
+        <pre><code>
+let i = 0;
+do {
+    console.log(i);
+    i++;
+} while (i < 5);
+        </code></pre>
+        <p>Vòng lặp <code>do...while</code> sẽ in ra các số từ 0 đến 4, và luôn đảm bảo rằng đoạn mã bên trong vòng lặp
+            sẽ được thực thi ít nhất một lần.</p>
+
+        <h2>4. Vòng Lặp <code>for...in</code></h2>
+        <p>Vòng lặp <code>for...in</code> được sử dụng để lặp qua các thuộc tính của một đối tượng hoặc các chỉ mục của
+            mảng. Cấu trúc của vòng lặp <code>for...in</code> như sau:</p>
+        <pre><code>
+let obj = { a: 1, b: 2, c: 3 };
+for (let key in obj) {
+    console.log(key + ": " + obj[key]);
+}
+        </code></pre>
+        <p>Trong ví dụ trên, vòng lặp <code>for...in</code> sẽ lặp qua tất cả các thuộc tính của đối tượng
+            <code>obj</code> và in ra tên thuộc tính cùng với giá trị của nó.
+        </p>
+
+        <h2>5. Vòng Lặp <code>for...of</code></h2>
+        <p>Vòng lặp <code>for...of</code> được sử dụng để lặp qua các phần tử trong một mảng hoặc một đối tượng có thể
+            lặp (iterable). Cấu trúc của vòng lặp <code>for...of</code> như sau:</p>
+        <pre><code>
+let arr = [10, 20, 30, 40];
+for (let value of arr) {
+    console.log(value);
+}
+        </code></pre>
+        <p>Vòng lặp <code>for...of</code> sẽ lặp qua các phần tử trong mảng <code>arr</code> và in ra giá trị của mỗi
+            phần tử.</p>
+
+        <h2>6. Kết luận</h2>
+        <p>Vòng lặp là công cụ quan trọng trong lập trình, giúp bạn xử lý các tác vụ lặp đi lặp lại một cách hiệu quả.
+            Việc hiểu rõ các loại vòng lặp trong JavaScript sẽ giúp bạn viết mã dễ hiểu và tối ưu hơn. Hãy thử áp dụng
+            các loại vòng lặp trên vào các bài toán thực tế để nắm vững kiến thức này.</p>
+
+        <div class="video-container">
+            <h2>Video Minh Họa: Các Loại Vòng Lặp trong JavaScript</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/stbbeMsgldc"
+                title="Vòng lặp For/in trong JavaScript | For...in loop" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div class="comment-section">
+            <h2>Bình luận</h2>
+            <p>[Phần bình luận để người đọc chia sẻ ý kiến và thảo luận thêm về bài viết.]</p>
+        </div>
+    </article>
+
+</body>
+
+</html>

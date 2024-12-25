@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới Thiệu về Java</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        article {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        .video-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .comment-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #ddd;
+        }
+
+        /* Thêm các media query để làm responsive */
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            article {
+                margin: 15px;
+                padding: 15px;
+            }
+
+            .video-container {
+                margin: 15px 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            /* Đảm bảo video có thể bao phủ toàn bộ chiều rộng của container */
+            .video-container iframe {
+                width: 450px;
+                height: 255px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1.3em;
+            }
+
+            p {
+                font-size: 0.9em;
+            }
+
+            article {
+                margin: 10px;
+                padding: 10px;
+            }
+
+            .video-container {
+                margin: 10px 0;
+            }
+
+            .comment-section {
+                margin-top: 20px;
+                padding-top: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .video-container iframe {
+                width: 300px;
+                height: 170px;
+            }
+
+            h1 {
+                font-size: 1.3em;
+            }
+
+            h2 {
+                font-size: 1.1em;
+            }
+
+            p {
+                font-size: 0.85em;
+            }
+
+            article {
+                margin: 5px;
+                padding: 10px;
+            }
+
+            .video-container {
+                margin: 10px 0;
+            }
+
+            .comment-section {
+                margin-top: 15px;
+                padding-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Giới Thiệu về Java</h1>
+    </header>
+
+    <article>
+        <h1>Giới Thiệu về Java</h1>
+        <p>Java là một trong những ngôn ngữ lập trình phổ biến nhất trên thế giới. Được phát triển lần đầu tiên bởi Sun
+            Microsystems vào những năm 1990 và hiện nay thuộc sở hữu của Oracle, Java đã trở thành nền tảng quan trọng
+            trong việc phát triển các ứng dụng di động, web, và doanh nghiệp. Với tính tương thích cao, dễ học, và hỗ
+            trợ đa nền tảng, Java đã và đang được sử dụng rộng rãi trong nhiều lĩnh vực công nghệ thông tin.</p>
+
+        <h2>Java là gì?</h2>
+        <p>Java là một ngôn ngữ lập trình hướng đối tượng, được thiết kế để có thể chạy trên bất kỳ hệ thống nào thông
+            qua Java Virtual Machine (JVM). Một trong những đặc điểm nổi bật của Java là nguyên lý "Write Once, Run
+            Anywhere", tức là mã nguồn Java có thể chạy trên bất kỳ nền tảng nào mà không cần thay đổi.</p>
+
+        <h2>Ưu điểm của Java</h2>
+        <p>Java có nhiều ưu điểm vượt trội, giúp nó trở thành một lựa chọn phổ biến trong phát triển phần mềm:</p>
+        <ul>
+            <li><strong>Độc lập với nền tảng</strong>: Chạy trên bất kỳ hệ điều hành nào có JVM (Windows, Linux, macOS,
+                v.v.)</li>
+            <li><strong>Hướng đối tượng</strong>: Java hỗ trợ lập trình hướng đối tượng (OOP), giúp tổ chức mã nguồn tốt
+                hơn và dễ bảo trì.</li>
+            <li><strong>An toàn và bảo mật</strong>: Java có cơ chế bảo mật mạnh mẽ, bao gồm kiểm tra lỗi và các hạn chế
+                an ninh trong môi trường JVM.</li>
+            <li><strong>Khả năng mở rộng</strong>: Java rất phù hợp với các ứng dụng quy mô lớn, từ ứng dụng doanh
+                nghiệp đến các ứng dụng di động.</li>
+        </ul>
+
+        <h2>Ứng Dụng của Java</h2>
+        <p>Java được sử dụng rộng rãi trong các lĩnh vực như:</p>
+        <ul>
+            <li><strong>Ứng dụng web</strong>: Java giúp phát triển các ứng dụng web mạnh mẽ, với các công cụ như
+                Spring, Hibernate và JavaServer Pages (JSP).</li>
+            <li><strong>Ứng dụng di động</strong>: Java là ngôn ngữ chính để phát triển ứng dụng Android.</li>
+            <li><strong>Ứng dụng doanh nghiệp</strong>: Java được sử dụng để xây dựng các hệ thống phần mềm cho doanh
+                nghiệp lớn.</li>
+            <li><strong>Ứng dụng khoa học</strong>: Java được sử dụng trong các ứng dụng tính toán khoa học và phân tích
+                dữ liệu.</li>
+        </ul>
+
+        <h2>Ví Dụ về Mã Java Cơ Bản</h2>
+        <p>Ví dụ đơn giản về chương trình Hello World trong Java:</p>
+        <pre><code>
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+    </code></pre>
+
+        <div class="video-container">
+            <h2>Video Minh Họa: Giới Thiệu về Java</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/2b70hAXPSuc?si=e2BVSiHaoSYchmHH"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
+        <h2>Kết luận</h2>
+        <p>Java là một ngôn ngữ lập trình mạnh mẽ, linh hoạt và dễ học, với khả năng phát triển các ứng dụng từ đơn giản
+            đến phức tạp. Việc hiểu và thành thạo Java sẽ mở ra rất nhiều cơ hội trong nghề lập trình. Nếu bạn có bất kỳ
+            câu hỏi nào, đừng ngần ngại để lại câu hỏi dưới phần bình luận!</p>
+
+        <p>Cảm ơn bạn đã theo dõi bài viết và đừng quên ghé thăm blog của chúng tôi để khám phá thêm nhiều bài viết thú
+            vị về lập trình Java và các ngôn ngữ khác!</p>
+
+        <div class="comment-section">
+            <h2>Bình luận</h2>
+            <p>[Phần bình luận để người đọc chia sẻ ý kiến và thảo luận thêm về bài viết.]</p>
+        </div>
+    </article>
+
+</body>
+
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ - Blog Java</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #0077cc;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1rem 0 0;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+            color: #ffcc00;
+        }
+
+        .profile {
+            text-align: center;
+            margin: 2rem 0;
+            animation: slideIn 1.5s ease-out;
+        }
+
+        .avatar {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            animation: zoomIn 1.5s ease;
+        }
+
+        .about-me,
+        .skills,
+        .hobbies {
+            max-width: 800px;
+            margin: 1rem auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            opacity: 0;
+            animation: fadeInUp 1.5s ease forwards;
+        }
+
+        h3 {
+            border-bottom: 2px solid #0077cc;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            color: #0077cc;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        ul li strong {
+            color: #0077cc;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: #0077cc;
+            color: white;
+            margin-top: 2rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        a {
+            color: #0077cc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #ffcc00;
+        }
+
+        /* Thêm các media query để làm responsive */
+        @media (max-width: 1024px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            .profile img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .about-me,
+            .skills,
+            .hobbies {
+                margin: 1rem;
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .avatar {
+                width: 120px;
+                height: 120px;
+            }
+
+            .about-me,
+            .skills,
+            .hobbies {
+                max-width: 100%;
+                margin: 1rem;
+                padding: 1rem;
+            }
+
+            .profile h2 {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.1rem;
+            }
+
+            .profile h2 {
+                font-size: 1.1rem;
+            }
+
+            .profile {
+                margin: 1rem 0;
+            }
+
+            .avatar {
+                width: 100px;
+                height: 100px;
+            }
+
+            .about-me,
+            .skills,
+            .hobbies {
+                margin: 0.5rem;
+                padding: 1rem;
+            }
+
+            footer {
+                padding: 0.5rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Blog Lập Trình Java & JavaScript</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="profile">
+            <img src="https://m.yodycdn.com/blog/avatar-dep-cho-nam-yody-vn33.jpg" alt="Ảnh đại diện" class="avatar">
+            <h2>Xin chào! Tôi là Võ Minh Đức</h2>
+            <p>Tôi là một lập trình viên với hơn 3 năm kinh nghiệm làm việc với Java và JavaScript. Mục tiêu của tôi là
+                chia sẻ kiến thức lập trình dễ hiểu và thực tế, giúp các bạn phát triển sự nghiệp trong lĩnh vực công
+                nghệ thông tin.</p>
+        </section>
+
+        <section class="about-me">
+            <h3>Thông tin cá nhân</h3>
+            <ul>
+                <li><strong>Họ tên:</strong> Võ Minh Đức</li>
+                <li><strong>Ngày sinh:</strong> 14/01/2003</li>
+                <li><strong>Email:</strong> vominhduc760@gmail.com</li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/vominhduc11">github.com/vominhduc11</a></li>
+            </ul>
+        </section>
+
+        <section class="skills">
+            <h3>Kỹ năng chuyên môn</h3>
+            <ul>
+                <li>Lập trình Java (Spring Boot, Hibernate)</li>
+                <li>Phát triển giao diện với JavaScript (React, Vue.js)</li>
+                <li>Xây dựng API RESTful</li>
+                <li>Cơ sở dữ liệu: MySQL, PostgreSQL</li>
+                <li>Công cụ: Git, Docker</li>
+            </ul>
+        </section>
+
+        <section class="hobbies">
+            <h3>Sở thích</h3>
+            <p>Khi không làm việc, tôi thường đọc sách về công nghệ, tham gia các khóa học online, và chơi cờ vua. Tôi
+                cũng yêu thích viết blog để chia sẻ kiến thức và học hỏi từ cộng đồng lập trình viên.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Blog Java của Võ Minh Đức</p>
+    </footer>
+</body>
+
+</html>
